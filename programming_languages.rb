@@ -45,5 +45,3 @@ def reformat_languages(languages)
   end
   new_hash
 end
-
-puts reformat_languages(languages)
