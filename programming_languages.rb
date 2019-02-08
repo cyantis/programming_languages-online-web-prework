@@ -36,7 +36,11 @@ def reformat_languages(languages)
   new_hash = {}
   languages.each do |lang, data|
     data.each do |language, type|
-      new_hash[language] = {type: type.flatten[1], style: [lang]}
+      if new_hash.key?(language)
+        new_hash[language][:style] << lang
+      else
+        new_hash[language] = {type: type.flatten[1], style: [lang]}
+      end
     end
   end
   new_hash
