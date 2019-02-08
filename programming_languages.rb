@@ -36,7 +36,7 @@ def reformat_languages(languages)
   new_hash = {}
   languages.each do |lang, data|
     data.each do |language, type|
-      new_hash[language] = {type: type.flatten[1], style: lang}
+      new_hash[language] = {type: type.flatten[1], style: "#{lang}"}
     end
   end
   new_hash
